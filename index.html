@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пашков Дмитрий - Разработчик игр на Unity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        function openTab(evt, section) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(section).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        function openGameTab(evt, platform) {
+            var i, gametabcontent, gametablinks;
+            gametabcontent = document.getElementsByClassName("gametabcontent");
+            for (i = 0; i < gametabcontent.length; i++) {
+                gametabcontent[i].style.display = "none";
+            }
+            gametablinks = document.getElementsByClassName("gametablinks");
+            for (i = 0; i < gametablinks.length; i++) {
+                gametablinks[i].className = gametablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(platform).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+        
+        function showGallery(gameId) {
+            var gallery = document.getElementById(gameId);
+            gallery.style.display = gallery.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <a class="tablinks" onclick="openTab(event, 'about')">
+            <i class="fas fa-user"></i>
+            <span>Обо мне</span>
+        </a>
+        <a class="tablinks" onclick="openTab(event, 'games')">
+            <i class="fas fa-gamepad"></i>
+            <span>Мои игры</span>
+        </a>
+        <a class="tablinks" onclick="openTab(event, 'achievements')">
+            <i class="fas fa-trophy"></i>
+            <span>Достижения</span>
+        </a>
+        <a class="tablinks" onclick="openTab(event, 'contact')">
+            <i class="fas fa-envelope"></i>
+            <span>Контакты</span>
+        </a>
+    </div>
+    <div class="content">
+        <section id="about" class="tabcontent" style="display: block;">
+            <h2>Обо мне</h2>
+            <img src="me.jpg" alt="Автор" class="profile-pic">
+            <p>Привет! Меня зовут Пашков Дмитрий, я разработчик игр на Unity. Имею опыт разработки различных игр, в том числе для мобильных платформ и веб. Я стремлюсь создавать качественные и увлекательные игры, которые будут приносить радость игрокам по всему миру.</p>
+        </section>
+
+        <section id="games" class="tabcontent">
+            <h2>Мои игры</h2>
+            <div class="gametab">
+                <button class="gametablinks" onclick="openGameTab(event, 'Web')">
+                    <i class="fas fa-globe"></i> Web
+                </button>
+                <button class="gametablinks" onclick="openGameTab(event, 'Android')">
+                    <i class="fab fa-android"></i> Android
+                </button>
+            </div>
+
+            <div id="Android" class="gametabcontent" style="display:none">
+                <div class="game">
+                    <h3>Easy, Quizzy!</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game1-gallery')">Показать больше</button>
+                        <div id="game1-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Викторина на разные темы</p>
+                    <p>Доступно на: <a target="_blank" href="https://play.google.com/store/apps/details?id=com.battlecrows.easyquizzy&hl=ru">Google Play</a></p>
+                    <p>Технологии: Unity, Google Play SDK, Newtonsoft.Json</p>
+                </div>
+                <div class="game">
+                    <h3>ПрыгСкок - игра-платформер</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game2-gallery')">Показать больше</button>
+                        <div id="game2-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Платформер с множеством уровней</p>
+                    <p>Больше не доступно на Google Play из-за устаревания</p>
+                    <p>Технологии: Unity, Google Play SDK</p>
+                </div>
+                <div class="game">
+                    <h3>Spinning Cheese</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game3-gallery')">Показать больше</button>
+                        <div id="game3-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Аркада, в которой надо попадать в тайминг</p>
+                    <p>Больше не доступно на Google Play из-за устаревания</p>
+                    <p>Технологии: Unity, Google Play SDK</p>
+                </div>
+                <div class="game">
+                    <h3>Spin It!</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game4-gallery')">Показать больше</button>
+                        <div id="game4-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Аркада, в которой нужно уворачиваться</p>
+                    <p>Больше не доступно на Google Play из-за устаревания</p>
+                    <p>Технологии: Unity, Google Play SDK</p>
+                </div>
+                <div class="game">
+                    <h3>Crazy Run</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game11-gallery')">Показать больше</button>
+                        <div id="game11-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Прототип игры-лабиринта, где управление шаром происходит свайпами</p>
+                    <p>Доступна на: <a target="_blank" href="https://battlecrow.itch.io/crazy-run">itch.io</a></p>
+                    <p>Технологии: Unity</p>
+                </div>
+            </div>
+
+            <div id="Web" class="gametabcontent" style="display:none">
+                <div class="game">
+                    <h3>MIREARCANOID</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game5-gallery')">Показать больше</button>
+                        <div id="game5-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Обычный арканоид</p>
+                    <p>Была удалена из каталога Яндекс.Игр из-за низкого количества игроков</p>
+                    <p>Технологии: Unity, Yandex Game SDK</p>
+                </div>
+                <div class="game">
+                    <h3>Spinning Cheese</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game6-gallery')">Показать больше</button>
+                        <div id="game6-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Портирование игры с Android на Web</p>
+                    <p>Была удалена из каталога Яндекс.Игр из-за низкого количества игроков</p>
+                    <p>Технологии: Unity, Yandex Game SDK</p>
+                </div>
+                <div class="game">
+                    <h3>Alien Guardian: Fight For Earth</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game7-gallery')">Показать больше</button>
+                        <div id="game7-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Базовый прототип 2D Platformer Shooter с одним уровнем</p>
+                    <p>Доступно на: <a target="_blank" href="https://battlecrow.itch.io/alien-guardian">itch.io</a></p>
+                    <p>Технологии: Unity</p>
+                </div>
+                <div class="game">
+                    <h3>Квест со второго сезона конкурса "Начни игру"</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game8-gallery')">Показать больше</button>
+                        <div id="game8-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Квест с системами диалогов, инвентаря и боёвкой</p>
+                    <p>Доступно на: <a target="_blank" href="https://battlecrow.itch.io/startgame-final">itch.io</a></p>
+                    <p>Технологии: Unity, JSON</p>
+                </div>
+                <div class="game">
+                    <h3>Save The Barrack</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game10-gallery')">Показать больше</button>
+                        <div id="game10-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Простенькая игрушка про управление временем и ресурсами</p>
+                    <p>Доступна на: <a target="_blank" href="https://battlecrow.itch.io/savethebarrack">itch.io</a></p>
+                    <p>Технологии: Unity</p>
+                </div>
+                <div class="game">
+                    <h3>Wild Ball</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game12-gallery')">Показать больше</button>
+                        <div id="game12-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Прототип 3D платформера</p>
+                    <p>Доступна на: <a target="_blank" href="https://battlecrow.itch.io/wildball">itch.io</a></p>
+                    <p>Технологии: Unity</p>
+                </div>
+                <div class="game">
+                    <h3>Мини-игры для пар по английскому языку</h3>
+                    <div class="gallery">
+                        <img src="game_screenshot1.jpg" alt="Скриншот игры">
+                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
+                        <button onclick="showGallery('game9-gallery')">Показать больше</button>
+                        <div id="game9-gallery" class="gallery-hidden">
+                            <img src="game_screenshot3.jpg" alt="Скриншот игры">
+                            <img src="game_screenshot4.jpg" alt="Скриншот игры">
+                        </div>
+                    </div>
+                    <p>Набор мини-игр, которые делались на коленке ради автомата по английскому</p>
+                    <p><a target="_blank" href="https://battlecrow.itch.io/browser-quiz">Викторина по браузерам</a></p>
+                    <p><a target="_blank" href="https://battlecrow.itch.io/language-quiz">Викторина по языкам программирования</a></p>
+                    <p><a target="_blank" href="https://battlecrow.itch.io/the-field-of-dreams">Поле Чудес</a></p>
+                    <p><a target="_blank" href="https://battlecrow.itch.io/one-last-time">Своя Игра</a></p>
+                    <p>Технологии: Unity</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="tabcontent">
+            <h2>Достижения</h2>
+            <div class="achievements-gallery">
+                <div class="achievement">
+                    <img src="gameJamStartGame.jpg" alt="Достижение 1">
+                    <p>В составе команды CoinFlipers на геймджеме от "Начни игру" победил в номинации "Лучшее соответствие теме"</p>
+                </div>
+                <div class="achievement">
+                    <img src="finalStartGame.jpg" alt="Достижение 2">
+                    <p>В рамках второго сезона конкурса "Начни игру" занял 3-е место в треке "Unity-разработчик"</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tabcontent">
+            <h2>Контакты</h2>
+            <div class="social-links">
+                <a target="_blank" href="https://github.com/BattleCrow-dev"><i class="fab fa-github"></i> GitHub</a>
+                <a target="_blank" href="https://t.me/matrix_has_you_neo"><i class="fab fa-telegram"></i> Telegram</a>
+                <a target="_blank" href="https://vk.com/matrix_has_you_neo"><i class="fab fa-vk"></i> ВК</a>
+                <a target="_blank" href="https://battlecrow.itch.io/"> itch.io</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

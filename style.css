@@ -1,0 +1,228 @@
+/* Цвета */
+:root {
+    --primary-color: #1abc9c; /* Основной цвет (бирюзовый) */
+    --secondary-color: #f39c12; /* Вторичный цвет (оранжевый) */
+    --accent-color: #8e44ad; /* Акцентный цвет (фиолетовый) */
+    --dark-background: #34495e; /* Тёмный фон */
+    --sidebar-background: #2c3e50; /* Тёмный фон sidebar */
+    --content-background: #202c38; /* Тёмный фон контента */
+    --card-background: #2c3e50; /* Тёмный фон карточек */
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background: var(--dark-background);
+    display: flex;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 80px;
+    background: var(--sidebar-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 10px 0;
+    transition: color 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.sidebar a span {
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.sidebar a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.sidebar a.active {
+    color: var(--primary-color);
+}
+
+.content {
+    margin-left: 100px;
+    padding: 20px;
+    flex: 1;
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--content-background);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2.5em;
+}
+
+h4 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.profile-pic {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+p {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.gametab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.gametab button {
+    background-color: var(--sidebar-background);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+
+.gametab button i {
+    margin-right: 5px;
+}
+
+.gametab button:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.gametab button.active {
+    background-color: var(--primary-color);
+}
+
+.gametabcontent {
+    display: none;
+}
+
+.game {
+    margin: 20px 0;
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+}
+
+.game:hover {
+    transform: scale(1.015);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 48%;
+    margin: 1%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.gallery button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.gallery button:hover {
+    background-color: var(--secondary-color);
+}
+
+.gallery-hidden {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.achievements-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.achievement {
+    width: 30%;
+    margin: 15px;
+    text-align: center;
+}
+
+.achievement img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.achievement p {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
