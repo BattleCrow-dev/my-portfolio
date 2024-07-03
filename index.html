@@ -62,10 +62,15 @@
         </a>
     </div>
     <div class="content">
-        <section id="about" class="tabcontent" style="display: block;">
+
+        <section id="none" class="tabcontent" style="display: block;">
+            <h2>Выбери что-нибудь из панели навигации!</h2>
+        </section>
+
+        <section id="about" class="tabcontent" style="display:none">
             <h2>Обо мне</h2>
             <img src="me.jpg" alt="Автор" class="profile-pic">
-            <p>Привет! Меня зовут Пашков Дмитрий, я разработчик игр на Unity. Имею опыт разработки различных игр, в том числе для мобильных платформ и веб. Я стремлюсь создавать качественные и увлекательные игры, которые будут приносить радость игрокам по всему миру.</p>
+            <p>Привет! <br> Меня зовут Пашков Дмитрий, я разработчик игр на Unity. <br> <br> Имею опыт разработки различных игр, в том числе для мобильных и веб платформ. <br> <br> Я стремлюсь создавать качественные и увлекательные игры, которые будут приносить радость игрокам по всему миру.</p>
         </section>
 
         <section id="games" class="tabcontent">
@@ -84,7 +89,6 @@
                     <h3>Easy, Quizzy!</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game1-gallery')">Показать больше</button>
                         <div id="game1-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -99,7 +103,6 @@
                     <h3>ПрыгСкок - игра-платформер</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game2-gallery')">Показать больше</button>
                         <div id="game2-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -114,7 +117,6 @@
                     <h3>Spinning Cheese</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game3-gallery')">Показать больше</button>
                         <div id="game3-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -129,7 +131,6 @@
                     <h3>Spin It!</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game4-gallery')">Показать больше</button>
                         <div id="game4-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -144,7 +145,6 @@
                     <h3>Crazy Run</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game11-gallery')">Показать больше</button>
                         <div id="game11-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -162,7 +162,6 @@
                     <h3>MIREARCANOID</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game5-gallery')">Показать больше</button>
                         <div id="game5-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -177,7 +176,6 @@
                     <h3>Spinning Cheese</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game6-gallery')">Показать больше</button>
                         <div id="game6-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -192,7 +190,6 @@
                     <h3>Alien Guardian: Fight For Earth</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game7-gallery')">Показать больше</button>
                         <div id="game7-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -207,7 +204,6 @@
                     <h3>Квест со второго сезона конкурса "Начни игру"</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game8-gallery')">Показать больше</button>
                         <div id="game8-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -222,7 +218,6 @@
                     <h3>Save The Barrack</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game10-gallery')">Показать больше</button>
                         <div id="game10-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -237,7 +232,6 @@
                     <h3>Wild Ball</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game12-gallery')">Показать больше</button>
                         <div id="game12-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
@@ -252,7 +246,6 @@
                     <h3>Мини-игры для пар по английскому языку</h3>
                     <div class="gallery">
                         <img src="game_screenshot1.jpg" alt="Скриншот игры">
-                        <img src="game_screenshot2.jpg" alt="Скриншот игры">
                         <button onclick="showGallery('game9-gallery')">Показать больше</button>
                         <div id="game9-gallery" class="gallery-hidden">
                             <img src="game_screenshot3.jpg" alt="Скриншот игры">
